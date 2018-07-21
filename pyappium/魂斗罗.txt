@@ -1,0 +1,8 @@
+*** Settings ***
+Library           pages/launchPage.py
+
+*** Test Cases ***
+0variables
+    comment    begin
+
+启动程序
