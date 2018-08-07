@@ -10,8 +10,10 @@ def killProcessByName(name):
         p = psutil.Process(pid)
         currentName = p.name()
         if currentName == name or currentName == '{}.exe'.format(name):
-            p.terminate()
-
+            try:
+                p.terminate()
+            except Exception,e:
+                pass
 
 if __name__ == '__main__':
     killProcessByName('chromedriver')
