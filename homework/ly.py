@@ -23,8 +23,16 @@ def stringLink(args):
     return '-'.join(map(str,item))
 
 
+def accum(string):
+    result = ''
+    for i in xrange(len(string)):
+        if i == 0:
+            result = string[i].upper()
+            continue
+        current = string[i].upper() + string[i].lower() * i
+        result += '-' + current
+    return result
+
 if __name__ == "__main__":
-    a = [1,2,3,4]
-    b = (6,7,8,9)
-    c = set(b)
-    print stringArgs(a)
+    s = 'abcdea'
+    print accum(s)

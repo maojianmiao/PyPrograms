@@ -27,9 +27,9 @@ CELERY_ROUTES = {
     'tasks.send':{"queue":"checkInterface","routing_key":"checkInterface"},
  } 
 
-#ELERYBEAT_SCHEDULE = {
-#   'ptask': {
-#       'task': 'tasks.period',
-#      'schedule': timedelta(seconds=5),
-#   },
-#   }
+ELERYBEAT_SCHEDULE = {
+   'ptask': {
+       'task': 'tasks.period',
+      'schedule': timedelta(seconds=5),
+   },
+   }
